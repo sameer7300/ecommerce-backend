@@ -85,4 +85,59 @@ project-backend/
 ├── yarn.lock / package-lock.json # Dependency lock file
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+API Endpoints
+Authentication
+POST /api/v1/register: Register a new user.
+POST /api/v1/login: Log in a user.
+GET /api/v1/logout: Log out a user.
+Products
+GET /api/v1/products: Get all products.
+POST /api/v1/admin/product/new: Add a new product (Admin only).
+PUT /api/v1/admin/product/:id: Update a product (Admin only).
+DELETE /api/v1/admin/product/:id: Delete a product (Admin only).
+Orders
+POST /api/v1/order/new: Place a new order.
+GET /api/v1/orders/me: Get user's orders.
+GET /api/v1/admin/orders: Get all orders (Admin only).
+Payments
+POST /api/v1/payment/process: Process a payment.
+GET /api/v1/stripeapikey: Get Stripe API key.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Technologies Used
+
+Node.js
+Express.js
+MongoDB (Mongoose ORM)
+JWT for authentication
+Cloudinary for media storage
+Stripe for payment processing
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Error Handling
+The application uses centralized error handling for:
+
+Invalid Mongoose Object IDs.
+Duplicate entries in MongoDB.
+JWT errors (invalid or expired tokens).
+Middleware:
+
+error.js: Handles all API errors.
+auth.js: Validates user roles and authentication.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
